@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block b1 %}
+{% load static %}
+<h2 style="text-align: right;">
+    <a href="{% url 'home' %}">HOME</a>
+    <a href="{% url 'app1:customer' %}">| CUSTOMERS |</a>
+    <a href="{% url 'app1:products' %}">PRODUCTS |</a>
+    <a href="{% url 'app1:orders' %}">ORDERS |</a>
+</h2>
+{% endblock b1 %}
+{% block b2 %}
+<h2>
+    <img src="{% static 'images/myimg.jpeg' %}" class="center">
+    {{data}}
+</h2>
+{% endblock b2 %}

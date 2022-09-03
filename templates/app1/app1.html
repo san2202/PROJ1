@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block b1 %}
+{% load static %}
+    <a href="{% url 'app1:customer' %}"><img src="{% static 'images/myimg.jpeg' %}" class="center"></a>
+    <h1 style="text-align: center;">
+    {{data}}
+    </h1>
+    <form style="text-align: center;">
+        <label name="username">USERNAME</label>
+        <input type="text" placeholder="Enter Username" name="username"><br><br>
+        <label name="password">PASSWORD</label>
+        <input type="text" placeholder="Enter Password" name="password"><br><br>
+        <a href="{% url 'home' %}"><input type="button" value="Submit"></a>
+        <a href="{% url 'app1:app1' %}"><input type="button" value="New user"></a>
+    </form>
+{% endblock b1 %}

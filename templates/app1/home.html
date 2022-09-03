@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block b1 %}
+{% load static %}
+<h2 style="text-align: right;">
+    <a href="{% url 'home' %}">HOME</a>
+    <a href="{% url 'app1:customer' %}">| CUSTOMERS |</a>
+    <a href="{% url 'app1:products' %}">PRODUCTS |</a>
+    <a href="{% url 'app1:orders' %}">ORDERS |</a>
+</h2>
+{% endblock b1 %}
+{% block b2 %}
+ <div class="container mt-5">
+    <form action="" method="post"> 
+        {% csrf_token %}
+        {{form.as_p}}
+        <input class="btn btn-success" type="submit" value="Submit">
+        <input class="btn btn-success" type="reset" value="Cancel">
+    </form>
+</div>
+{% endblock b2 %}
